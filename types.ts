@@ -48,7 +48,6 @@ export interface Feature {
 export interface Integration {
   id: string;
   title: string;
-  name: string;
   description?: string;
   logo?: string;
   category?: string;
