@@ -32,6 +32,7 @@ export interface CardProps {
 export interface Feature {
   id: string;
   title: string;
+  description: string;
   metadata?: {
     feature_name?: string;
     description?: string;
@@ -45,6 +46,7 @@ export interface Feature {
 export interface Integration {
   id: string;
   title: string;
+  name: string;
   metadata?: {
     integration_name?: string;
     description?: string;
@@ -60,6 +62,7 @@ export interface Integration {
 export interface PricingPlan {
   id: string;
   title: string;
+  name: string;
   metadata?: {
     plan_name?: string;
     price?: string;
