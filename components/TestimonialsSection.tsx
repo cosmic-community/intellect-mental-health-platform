@@ -154,7 +154,8 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
               <div className="text-3xl font-bold text-green-600 mb-2">4M+</div>
               <div className="text-gray-600">Active Users</div>
             </div>
-            <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
               <div className="text-gray-600">Countries Served</div>
             </div>
           </div>
