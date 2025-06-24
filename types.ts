@@ -33,6 +33,8 @@ export interface Feature {
   id: string;
   title: string;
   description: string;
+  icon?: string;
+  image?: string;
   metadata?: {
     feature_name?: string;
     description?: string;
@@ -47,6 +49,9 @@ export interface Integration {
   id: string;
   title: string;
   name: string;
+  description?: string;
+  logo?: string;
+  category?: string;
   metadata?: {
     integration_name?: string;
     description?: string;
@@ -63,6 +68,12 @@ export interface PricingPlan {
   id: string;
   title: string;
   name: string;
+  price?: string;
+  period?: string;
+  description?: string;
+  features?: string[];
+  popular?: boolean;
+  ctaText?: string;
   metadata?: {
     plan_name?: string;
     price?: string;
