@@ -10,6 +10,51 @@ export interface CosmicObject {
   modified_at: string;
 }
 
+// Component prop interfaces
+export interface ButtonProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  onClick?: () => void;
+  href?: string;
+  className?: string;
+  disabled?: boolean;
+}
+
+export interface CardProps {
+  children: React.ReactNode;
+  variant?: 'default' | 'elevated' | 'outlined';
+  padding?: 'none' | 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+export interface Feature {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  image?: string;
+}
+
+export interface Integration {
+  id: string;
+  name: string;
+  description: string;
+  logo: string;
+  category: string;
+}
+
+export interface PricingPlan {
+  id: string;
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  ctaText: string;
+}
+
 // Specific object types with realistic metadata interfaces
 export interface Statistic extends CosmicObject {
   type_slug: 'statistics';

@@ -6,7 +6,10 @@ import type {
   HomepageSection, 
   Solution, 
   Page, 
-  FAQItem
+  FAQItem,
+  Feature,
+  Integration,
+  PricingPlan
 } from '@/types'
 import { hasStatus } from '@/types'
 
@@ -150,4 +153,110 @@ export async function getFAQItems(): Promise<FAQItem[]> {
     }
     throw new Error('Failed to fetch FAQ items')
   }
+}
+
+// Mock data functions for demo purposes
+export async function getFeatures(): Promise<Feature[]> {
+  // This would normally fetch from Cosmic, but for now return mock data
+  return [
+    {
+      id: '1',
+      title: 'AI-Powered Mental Health Support',
+      description: 'Advanced AI technology provides personalized mental health recommendations and support.',
+      icon: '🧠',
+      image: '/images/features-1.jpg'
+    },
+    {
+      id: '2',
+      title: '24/7 Crisis Support',
+      description: 'Round-the-clock crisis intervention and support when you need it most.',
+      icon: '🆘',
+      image: '/images/features-2.jpg'
+    },
+    {
+      id: '3',
+      title: 'Professional Therapist Network',
+      description: 'Connect with licensed mental health professionals in your area.',
+      icon: '👥',
+      image: '/images/features-3.jpg'
+    }
+  ]
+}
+
+export async function getIntegrations(): Promise<Integration[]> {
+  // This would normally fetch from Cosmic, but for now return mock data
+  return [
+    {
+      id: '1',
+      name: 'Slack',
+      description: 'Integrate mental health check-ins directly into your Slack workspace.',
+      logo: '/images/logo.png',
+      category: 'Communication'
+    },
+    {
+      id: '2',
+      name: 'Microsoft Teams',
+      description: 'Seamless integration with Microsoft Teams for workplace wellness.',
+      logo: '/images/logo.png',
+      category: 'Communication'
+    },
+    {
+      id: '3',
+      name: 'Zoom',
+      description: 'Enable wellness sessions and mental health support in Zoom.',
+      logo: '/images/logo.png',
+      category: 'Video Conferencing'
+    }
+  ]
+}
+
+export async function getPricingPlans(): Promise<PricingPlan[]> {
+  // This would normally fetch from Cosmic, but for now return mock data
+  return [
+    {
+      id: '1',
+      name: 'Starter',
+      price: '$29',
+      period: 'per month',
+      description: 'Perfect for small teams getting started with mental health support.',
+      features: [
+        'Up to 50 employees',
+        'Basic mental health assessments',
+        'Email support',
+        'Mobile app access'
+      ],
+      ctaText: 'Start Free Trial'
+    },
+    {
+      id: '2',
+      name: 'Professional',
+      price: '$79',
+      period: 'per month',
+      description: 'Comprehensive mental health solution for growing organizations.',
+      features: [
+        'Up to 200 employees',
+        'Advanced analytics',
+        'Priority support',
+        'Custom integrations',
+        'Manager dashboard'
+      ],
+      popular: true,
+      ctaText: 'Get Started'
+    },
+    {
+      id: '3',
+      name: 'Enterprise',
+      price: 'Custom',
+      period: 'pricing',
+      description: 'Tailored solution for large organizations with complex needs.',
+      features: [
+        'Unlimited employees',
+        'Dedicated account manager',
+        'Custom branding',
+        'Advanced security',
+        'SLA guarantees'
+      ],
+      ctaText: 'Contact Sales'
+    }
+  ]
 }
