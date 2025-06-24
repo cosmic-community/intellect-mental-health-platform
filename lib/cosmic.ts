@@ -189,7 +189,6 @@ export async function getIntegrations(): Promise<Integration[]> {
     {
       id: '1',
       title: 'Slack',
-      name: 'Slack',
       description: 'Integrate mental health check-ins directly into your Slack workspace.',
       logo: '/images/logo.png',
       category: 'Communication'
@@ -197,7 +196,6 @@ export async function getIntegrations(): Promise<Integration[]> {
     {
       id: '2',
       title: 'Microsoft Teams',
-      name: 'Microsoft Teams',
       description: 'Seamless integration with Microsoft Teams for workplace wellness.',
       logo: '/images/logo.png',
       category: 'Communication'
@@ -205,7 +203,6 @@ export async function getIntegrations(): Promise<Integration[]> {
     {
       id: '3',
       title: 'Zoom',
-      name: 'Zoom',
       description: 'Enable wellness sessions and mental health support in Zoom.',
       logo: '/images/logo.png',
       category: 'Video Conferencing'
