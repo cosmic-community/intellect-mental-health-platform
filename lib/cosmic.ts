@@ -6,9 +6,9 @@ import type {
   HomepageSection, 
   Solution, 
   Page, 
-  FAQItem,
-  hasStatus
+  FAQItem
 } from '@/types'
+import { hasStatus } from '@/types'
 
 export const cosmic = createBucketClient({
   bucketSlug: process.env.COSMIC_BUCKET_SLUG as string,
