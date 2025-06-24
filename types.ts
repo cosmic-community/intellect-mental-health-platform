@@ -19,6 +19,7 @@ export interface ButtonProps {
   href?: string;
   className?: string;
   disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export interface CardProps {
@@ -31,28 +32,43 @@ export interface CardProps {
 export interface Feature {
   id: string;
   title: string;
-  description: string;
-  icon: string;
-  image?: string;
+  metadata?: {
+    feature_name?: string;
+    description?: string;
+    icon?: {
+      imgix_url: string;
+    };
+    benefit?: string;
+  };
 }
 
 export interface Integration {
   id: string;
-  name: string;
-  description: string;
-  logo: string;
-  category: string;
+  title: string;
+  metadata?: {
+    integration_name?: string;
+    description?: string;
+    logo?: {
+      imgix_url: string;
+    };
+    category?: {
+      value: string;
+    };
+  };
 }
 
 export interface PricingPlan {
   id: string;
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  ctaText: string;
+  title: string;
+  metadata?: {
+    plan_name?: string;
+    price?: string;
+    billing_period?: string;
+    description?: string;
+    features?: string[];
+    is_popular?: boolean;
+    cta_text?: string;
+  };
 }
 
 // Specific object types with realistic metadata interfaces

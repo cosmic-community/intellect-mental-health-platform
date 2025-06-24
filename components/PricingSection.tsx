@@ -145,7 +145,7 @@ export default function PricingSection({ plans }: PricingSectionProps) {
 
                 {/* Features List */}
                 <div className="space-y-4 mb-8">
-                  {features.map((feature, index) => (
+                  {features.map((feature: string, index: number) => (
                     <div key={index} className="flex items-start space-x-3">
                       <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                         <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
